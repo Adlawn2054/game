@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("background1.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+#board {
+    width: 90vw; /* Adjusts width to fit the screen */
+    height: 90vw; /* Keeps it square */
+    max-width: 540px; /* Prevents it from getting too large on bigger screens */
+    max-height: 540px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: url("soil.jpg");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+#board div {
+    width: 30%; /* Adjusts to fit a 3x3 grid */
+    height: 30%;
+    background-image: url("pipe.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board div img {
+    width: 60%; /* Shrinks images proportionally */
+    height: 60%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Ensure proper spacing on smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #board {
+        border-width: 2px;
+    }
+
+    #board div img {
+        width: 50%; /* Reduce image size for better usability */
+        height: 50%;
+    }
+}
